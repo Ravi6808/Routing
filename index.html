@@ -1,0 +1,62 @@
+﻿<!Doctype html>
+<html>
+    <head>
+            <title></title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+          </head>
+          <body ng-app="x" >
+            <div class="fluid-container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand"href="#">Response Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item ">
+                              <a class="nav-link" href="#!/home">home Page</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link"href="#!/about">about</a>
+                            </li>
+							<li class="nav-item">
+                              <a class="nav-link"href="#!/service">service</a>
+                            </li>
+							<li class="nav-item">
+                              <a class="nav-link"href="#!/entertainment">entainment</a>
+                            </li>
+							<li class="nav-item">
+                              <a class="nav-link"href="#!/blog">blog</a>
+                            </li>
+							<li class="nav-item">
+                              <a class="nav-link"href="#!/contact">contact</a>
+                            </li>
+                          </ul>
+                          </div>
+                  </nav>
+          	 	     <div ng-view></div>
+					<script>
+					var z=angular.module("x",["ngRoute"]);
+                    z.config(function($routeProvider){
+	                $routeProvider
+		            .when("/",{templateUrl:"home.html"})
+		            .when("/home",{templateUrl:"home.html"})
+		            .when("/about",{templateUrl:"about.html"})
+		            .when("/service",{templateUrl:"service.html"})
+		            .when("/entertainment",{templateUrl:"entertainment.html"})
+		            .when("/blog",{templateUrl:"blog.html"})
+		            .when("/contact",{templateUrl:"contact.html"})
+		   
+	                 });
+	               </script>
+
+
+				</div>				  
+                </body>
+</html>
